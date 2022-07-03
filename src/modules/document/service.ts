@@ -10,7 +10,7 @@ class DocService {
         throw "NO DOC WITH THE GIVEN ID";
       }
     } catch (err) {
-      return { error: err };
+      return { error: typeof err === "string" ? err : "AN ERROR OCCURRED" };
     }
   }
 
